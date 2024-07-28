@@ -15,3 +15,13 @@ class Cashier:
     def transaction_result(self, coins, cost):
         """Return True when the payment is accepted, or False if money is insufficient.
            Hint: use the output of process_coins() function for cost input"""
+        if coins >= cost:
+            change = round(coins - cost, 2)
+            if change > 0:
+                print(f"Your change is {change} coins")
+            else:
+                print(f"Thank you for paying! There is not any change due back")
+            return True
+        else:
+            print(f"You did not enter enough money")
+            return False
