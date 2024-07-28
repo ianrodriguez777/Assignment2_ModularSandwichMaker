@@ -21,6 +21,9 @@ def main():
 
             if sandwich_maker_instance.check_resources(ingredients):
                 print(f"Your total is ${cost}")
+                coins = cashier_instance.process_coins()
+                if cashier_instance.transaction_result(coins, cost):
+                    print(sandwich_maker_instance.make_sandwich(customer_order, ingredients))
 
 if __name__=="__main__":
     main()
