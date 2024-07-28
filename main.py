@@ -9,9 +9,6 @@ recipes = data.recipes
 sandwich_maker_instance = SandwichMaker(resources)
 cashier_instance = Cashier()
 
-
-
-
 def main():
     while True:
         customer_order = input("What size sandwich would you like? (Options: Small, Medium, Large): ").lower()
