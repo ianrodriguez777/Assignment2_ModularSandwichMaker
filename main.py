@@ -13,8 +13,8 @@ def main():
     while True:
         customer_order = input("What size sandwich would you like? (Options: small, medium, large): ").lower()
         if customer_order in recipes:
-            cost = recipes[customer_order]["Cost"]
-            ingredients = recipes[customer_order]["Ingredients"]
+            cost = recipes[customer_order]["cost"]
+            ingredients = recipes[customer_order]["ingredients"]
 
             if sandwich_maker_instance.check_resources(ingredients):
                 print(f"Your total is ${cost}")
