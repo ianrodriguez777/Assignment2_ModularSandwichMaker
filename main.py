@@ -11,7 +11,7 @@ cashier_instance = Cashier()
 
 def main():
     while True:
-        customer_order = input("What size sandwich would you like? (Options: Small, Medium, Large): ").lower()
+        customer_order = input("What size sandwich would you like? (Options: small, medium, large): ").lower()
         if customer_order in recipes:
             cost = recipes[customer_order]["Cost"]
             ingredients = recipes[customer_order]["Ingredients"]
